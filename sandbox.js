@@ -427,7 +427,10 @@ let useri = {
     age: 30,
     email: "crystal@thenetninja.co.uk",
     location: "berlin",
-    blogs: ["Why mac & cheese rules", "20 things to do with marmite"],
+    blogs: [
+        {title: "Why mac & cheese rules", likes: 30},
+    {title: "Ten things to make with marmite", likes: 25}
+],
     login: function(){
         console.log("the user is logged in");
     },
@@ -437,7 +440,7 @@ let useri = {
     logBlogs: function(){
         console.log("This user has written: ");
         this.blogs.forEach(blog => {
-            console.log(blog);
+            console.log(blog.title, blog.likes);
 
         })
     }
@@ -469,4 +472,24 @@ useri.logout();
 console.log(this);
 useri.logBlogs();
 
-// Im writing somethingsg
+//Storing objects inside an array:
+const blogs = [
+    {title: "Why mac & cheese rules", likes: 30},
+    {title: "Ten things to make with marmite", likes: 25}
+];
+
+console.log(blogs);
+
+
+// ------------------ Mathobject -----
+
+
+console.log(Math);
+console.log(Math.PI);
+console.log(Math.E);
+
+const areal = 7.7;
+console.log(Math.round(areal));
+console.log(Math.floor(areal));
+
+
