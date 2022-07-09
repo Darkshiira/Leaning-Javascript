@@ -489,7 +489,23 @@ console.log(Math.PI);
 console.log(Math.E);
 
 const areal = 7.7;
-console.log(Math.round(areal));
-console.log(Math.floor(areal));
+console.log(Math.round(areal)); //Rounding
+console.log(Math.floor(areal)); //down
+console.log(Math.ceil(areal)); //up
+console.log(Math.trunc(areal)); // takes away decimals
+
+const random = Math.random();
+
+console.log(random);
+console.log(Math.round(random*100));
+
+//Primitive and Reference types
+
+//Primitive - stored on a stack - bit faster 
+//Numbers, strings, Booleans, null, undefined, symbols
+
+//Reference types  - stored in a heap - bit slower - only copies pointers
+//Object literals, arrays, functions, dates, all other objects
 
 
+// -------------------------- CHAPTER 6 - DOCUMENT OBJECT MODEL -------------------------------
