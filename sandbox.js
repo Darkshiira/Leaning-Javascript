@@ -509,3 +509,65 @@ console.log(Math.round(random*100));
 
 
 // -------------------------- CHAPTER 6 - DOCUMENT OBJECT MODEL -------------------------------
+
+// add content, popups, change css styles, react to clicking ex.
+
+//DOM add, change and delete content.
+//Make a cool pop-up effect in the webpage
+
+// DOM - Created by the browser, a HTML is loaded inside it  - a"Document" object, that we want our Javascript to interact with
+
+// you can write document. to find all different properties
+
+// document.get ... 
+
+// Inside the document is nodes which different hiarchies. Html is a root node. h1, p is text nodes.
+
+// -------------------------------------  Selecting - Quering the DOM , preferable ------------------------
+
+//const para = document.querySelector(`div.error`);
+//const para = document.querySelector(`.error`);
+//const para = document.querySelector(`p`);
+const para = document.querySelector(`body>h1`);
+
+const paras = document.querySelectorAll(`p`);
+console.log(para);
+console.log(paras);
+
+
+console.log(paras[2]);
+
+//Arrays
+paras.forEach(para => {
+    console.log(para);
+});
+
+
+const errors = document.querySelectorAll(`.error`);
+
+console.log(errors);
+
+// Selector = singular node
+//SelectorAll = multiple nodes.
+
+
+ // --------------------------------------Other ways to Query DOM-------------------
+
+// get an element by ID(singular)
+
+ const titly = document.getElementById(`page-title`);
+
+ console.log(titly);
+// get elements  by their classname(plural)
+
+const errorss = document.getElementsByClassName(`error`);
+console.log(errorss);
+console.log(errors[1]);
+
+//get elements by their tagname
+
+const paragraph = document.getElementsByTagName(`p`);
+console.log(paragraph);
+
+// -------------------- Adding and changing page content ---------------------
+
