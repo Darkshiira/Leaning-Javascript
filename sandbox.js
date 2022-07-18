@@ -571,7 +571,7 @@ console.log(paragraph);
 
 // -------------------- Adding and changing page content ---------------------
 
-const para = document.querySelector(`p`);
+const para = document.querySelectorAll(`p`);
 
 console.log(para.innerText);
 
@@ -579,7 +579,7 @@ para.innerText += "ninjas are awesome"; //just = to change it completly
 
 paras.forEach(para => {
     console.log(para.innerText);
-    para.innerText = "New text";
+    para.innerText = "I love theese people <3";
 });
 
 const content = document.querySelector(`.content`);
@@ -606,4 +606,7 @@ console.log(mssg.getAttribute(`class`));
 
 mssg.setAttribute(`class`, `success`);
 
-mssg.setAttribute(`style`,`color:green`);
+mssg.setAttribute(`style`,`color:red`);
+
+
+// 
