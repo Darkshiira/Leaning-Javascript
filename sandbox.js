@@ -528,10 +528,10 @@ console.log(Math.round(random*100));
 //const para = document.querySelector(`div.error`);
 //const para = document.querySelector(`.error`);
 //const para = document.querySelector(`p`);
-const para = document.querySelector(`body>h1`);
+//const para = document.querySelector(`body>h1`);
 
 const paras = document.querySelectorAll(`p`);
-console.log(para);
+//console.log(para);
 console.log(paras);
 
 
@@ -571,3 +571,39 @@ console.log(paragraph);
 
 // -------------------- Adding and changing page content ---------------------
 
+const para = document.querySelector(`p`);
+
+console.log(para.innerText);
+
+para.innerText += "ninjas are awesome"; //just = to change it completly
+
+paras.forEach(para => {
+    console.log(para.innerText);
+    para.innerText = "New text";
+});
+
+const content = document.querySelector(`.content`);
+console.log(content.innerHTML);
+
+content.innerHTML += "<h2>This is a new H2 </h2>";
+
+ninjas.forEach(person => {
+    content.innerHTML += `<p>${person}</p>`;
+});
+
+// --------------------------- getting and setting attributes -------------------
+
+
+const link = document.querySelector(`a`);
+
+console.log(link.getAttribute(`href`));
+link.setAttribute(`href`, `https://www.thenetninja.co.uk`);
+link.innerText = "The netninjas Website";
+
+const mssg = document.querySelector(`p`);
+
+console.log(mssg.getAttribute(`class`));
+
+mssg.setAttribute(`class`, `success`);
+
+mssg.setAttribute(`style`,`color:green`);
