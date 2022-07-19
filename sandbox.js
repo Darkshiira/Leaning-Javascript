@@ -571,7 +571,7 @@ console.log(paragraph);
 
 // -------------------- Adding and changing page content ---------------------
 
-const para = document.querySelectorAll(`p`);
+const para = document.querySelector(`p`);
 
 console.log(para.innerText);
 
@@ -609,4 +609,78 @@ mssg.setAttribute(`class`, `success`);
 mssg.setAttribute(`style`,`color:red`);
 
 
-// 
+// How to set attribute without completely overwriting it
+
+console.log(titly.style);
+console.log(titly.style.color);
+
+titly.style.margin = "50px";
+titly.style.color = "crimson";
+
+titly.style.color = "";
+
+//Adding and Remove classes from elements
+
+//add a class :     nameOfShit.classList.add("name of new fucking class")
+// remove a class:  nameOfShit.classList.remove("")
+
+/* --------- Challenge -------------
+const content = document.querySelectorAll("p");
+
+// content[0].classList.add("error");
+// content[4].classList.add("error");
+// content[6].classList.add("error");
+// content[1].classList.add("success");
+// content[3].classList.add("success");
+// content[7].classList.add("success");
+
+content.forEach((p) => {
+  if (p.textContent.includes("error")) {
+    p.classList.add("error");
+  } else if (p.textContent.includes("success")) {
+    p.classList.add("success");
+  }
+});
+
+console.log(content); */
+
+// Toggle a class
+
+titly.classList.toggle("test");
+titly.classList.toggle("test");
+
+// ------------------- Parents, children and siblings --------------
+
+//              html (root node)
+//              /           \
+//          head            body
+//          /           /   /   \
+//      title       h1      div(parent)     div - sibling divs
+//                           / \
+//                          p   p(children)    p - siblings
+
+const article = document.querySelector(`article`);
+
+console.log(article.children);
+
+//To be able to use for each
+console.log(Array.from(article.children)); // Doesnt alter the original.
+
+Array.from(article.children).forEach((child) => {
+    child.classList.add(`article-element`);
+});
+
+const articleTitle = document.querySelector("h2");
+
+console.log(articleTitle.parentElement); // To find the parent
+console.log(articleTitle.parentElement.parentElement);
+
+console.log(articleTitle.nextElementSibling);
+console.log(articleTitle.previousElementSibling);
+
+//You can even chain it:
+console.log(articleTitle.nextElementSibling.parentElement.children);
+
+// ------------- Event Basics --------
+
+
