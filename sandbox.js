@@ -683,4 +683,36 @@ console.log(articleTitle.nextElementSibling.parentElement.children);
 
 // ------------- Event Basics --------
 
+const button = document.querySelector(`button`);
+button.addEventListener(`click`, () => {
+   // ul.innerHTML += `<li>something new</li>`;
+   const li = document.createElement("li");
+   li.textContent = "Something new to do";
+   ul.append(li);
+   //prepend to put it on the top.
+});
 
+const items = document.querySelectorAll("li");
+
+//items.forEach(item => {
+ //   item.addEventListener(`click`, e => {
+   // if (e.target.tagName === "LI"){
+      //  e.target.remove();
+ //   }
+    //e.target.style.textDecoration = "line-through"
+   //e.stopPropagation(); //Stops the event to fire up to the parents.
+    
+
+//});
+
+// ------------- Creating and removing elements -----------
+
+const uli = document.querySelector("ul");
+
+// ul.remove(); To just remove it all
+
+uli.addEventListener("click," e => {
+    if( e.target.tagName === "LI"){
+        e.target.remove();
+    }
+});
